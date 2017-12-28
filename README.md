@@ -5,6 +5,7 @@ Java application to WebCrawl using
   - Junits
   - Jsoup library
   - logback
+  - apache String utils
 
 This program as of now checks base url, fetch page and prepare all urls for:
   - href attribute
@@ -17,17 +18,11 @@ Assumptions/Notes:
    - Javadoc added for logics, please refer
 
 How to compile:
-   - Please execute compile.bat file from root folder of project
+   - Use "maven install" command that will download dependencies and create jar
 
 How to execute:
-   - Please execute run.bat file from root folder of project
-   - To run on specific domain either change WebCrawler.java and recompile
-   - Or you can pass argument - for this copy command from run.bat and execute on command prompt
+   - From folder that has dependencies and WebCrawler jar, run WebCrawler
 
 With more time
-    - Better design can be thought off
     - Performance can be improved
-    - Think of adding third party utilities
-    - More test can be included
     - Error handling can be improved
-    - Ignored url can be treated in better ways
