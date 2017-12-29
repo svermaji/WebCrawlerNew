@@ -31,6 +31,9 @@ public class LinkCollector {
         if (debug) {
             logger.debug("Retrieving page links for url [" + url + "]");
         }
+        // Used helper method from docDownloader
+        // but can be used three separate methods
+        // to get document then Elements and last links
         return docDownLoader.getAbsHrefLinks(url);
     }
 
