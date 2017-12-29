@@ -13,7 +13,7 @@ import org.sv.webcrawler.util.Utils;
 
 import java.util.List;
 
-import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -32,7 +32,7 @@ public class LinkCollectorTest {
         LinkCollector linkCollector = new LinkCollector();
         linkCollector.setDocDownLoader(docDownLoader);
 
-        when(docDownLoader.makeAbsHrefLinks(any())).thenReturn(TestData.getMockLinks());
+        when(docDownLoader.getAbsHrefLinks(anyString())).thenReturn(TestData.getMockLinks());
 
         List<String> links = linkCollector.getPageLinks(Utils.W3SCHOOLS_SITE);
         Assert.assertEquals(links.size(), 14);
